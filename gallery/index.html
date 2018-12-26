@@ -47,30 +47,29 @@
       ];
 
       if (res.length > 0) {
-
           let index = 0;
 
-        img.src = 'i/' + res[index];
-
-        let prevPhoto = document.getElementById('prevPhoto');
-        prevPhoto.onclick = function() {
-          index--;
-          if (index < 0) {
-              index = res.length - 1;
-          }
-
           img.src = 'i/' + res[index];
-        };
 
-        let nextPhoto = document.getElementById('nextPhoto');
-        nextPhoto.onclick = function() {
-          index++;
-          if (index > res.length - 1) {
-              index = 0;
-          }
+          let prevPhoto = document.getElementById('prevPhoto');
+          prevPhoto.onclick = function() {
+            index--;
+            if (index < 0) {
+                index = res.length - 1;
+            }
 
-          img.src = 'i/' + res[index];
-        };
+            img.src = 'i/' + res[index];
+          };
+
+          let nextPhoto = document.getElementById('nextPhoto');
+          nextPhoto.onclick = function() {
+            index++;
+            if (index > res.length - 1) {
+                index = 0;
+            }
+
+            img.src = 'i/' + res[index];
+          };
       }
   </script>
 </body>

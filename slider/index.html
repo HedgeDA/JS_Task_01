@@ -43,7 +43,10 @@
       ];
 
       if (res.length > 0) {
-          let index = -1;
+          let index = 0;
+
+          img.src = 'i/' + res[index];
+
           setInterval(() => {
               index++;
               if (index > res.length - 1) {
